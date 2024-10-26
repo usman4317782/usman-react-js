@@ -1,6 +1,6 @@
 import React from "react";
 import "./sb-admin.css";
-
+import { Link } from "react-router-dom";
 
 function SideBar() {
   return (
@@ -28,20 +28,16 @@ function SideBar() {
 
         {/* Nav Item - Dashboard */}
         <li className="nav-item active">
-          <a className="nav-link" href="dashboard">
+          <Link className="nav-link" to={"/dashboard"}>
             <i className="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
-          </a>
+          </Link>
         </li>
-
-        <hr className="sidebar-divider my-0" />
-
-        {/* Nav Item - Dashboard */}
-        <li className="nav-item">
-          <a className="nav-link" href="user-profile">
-            <i className="fas fa-fw fa-tachometer-alt"></i>
+        <li className="nav-item active">
+          <Link className="nav-link" to={"/profile"}>
+            <i className="fa-solid fa-user"></i>
             <span>User Profile</span>
-          </a>
+          </Link>
         </li>
 
         {/* Divider */}
@@ -61,7 +57,7 @@ function SideBar() {
             aria-controls="collapseTwo"
           >
             <i className="fas fa-fw fa-cog"></i>
-            <span>Components</span>
+            <span>Product</span>
           </a>
           <div
             id="collapseTwo"
@@ -70,12 +66,12 @@ function SideBar() {
             data-parent="#accordionSidebar"
           >
             <div className="bg-white py-2 collapse-inner rounded">
-              <h6 className="collapse-header">Custom Components:</h6>
-              <a className="collapse-item" href="buttons.html">
-                Buttons
-              </a>
-              <a className="collapse-item" href="cards.html">
-                Cards
+              <h6 className="collapse-header">Custom Products:</h6>
+              <Link className="collapse-item" to="/add-products">
+                Add Product
+              </Link>
+              <a className="collapse-item" href="ProductList">
+                Product List
               </a>
             </div>
           </div>
