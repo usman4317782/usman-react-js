@@ -1,18 +1,22 @@
 import React from "react";
 import SideBar from "./SideBar";
 import AdminNavBar from "./AdminNavBar";
-import AdminPageContent from "./AdminPageContent";
-import PageWrapper from "./AdminPage2";
+
+import AdminPage from "./AdminPage";
+import Footer from "./Footer";
+import Profile from "./Profile";
 
 function Dashboard() {
   return (
     <div>
       <div id="wrapper">
         <SideBar />
+
         <div className="container-fluid">
           <AdminNavBar />
-          <AdminPageContent />
-          <PageWrapper />
+
+          <AdminPage />
+          <Footer />
         </div>
       </div>
     </div>

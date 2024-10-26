@@ -1,4 +1,6 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import SignUp from "./components/SignUp";
@@ -6,20 +8,20 @@ import "./App.css";
 import SignIn from "./components/SignIn";
 import Home from "./components/Home";
 import Dashboard from "./components/dashboard";
-import UserProfile from "./components/UserProfile";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import AddProducts from "./components/AddProducts";
+import Profile from "./components/Profile";
 function App() {
   return (
-    <div>
+    <div id="page-top">
       <Router>
-        <NavBar />
+        {/* <NavBar /> */}
         <Routes>
           <Route path="/" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/home" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/add-products" element={<AddProducts />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </Router>
     </div>
